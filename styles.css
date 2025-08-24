@@ -50,3 +50,4 @@ select,input[type=checkbox]{background:#0f1318;color:var(--text);border:1px soli
 .spec-table td:first-child{color:#9fb3c8;width:38%}
 .site-footer{border-top:1px solid var(--border);margin-top:12px;padding:12px 0;color:var(--muted)}
 .btn.wide{width:100%}
+#error-banner{display:none;background:#7b111f;color:#fff;padding:8px 12px;border-radius:8px;margin:12px 0;border:1px solid #a11627}

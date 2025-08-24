@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Warrior Skid Configurator (v2)</title>
+  <title>Warrior Skid Configurator (v2.1)</title>
   <link rel="stylesheet" href="./styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
@@ -13,7 +13,7 @@
     <div class="container header-inner">
       <div class="brand">
         <div class="logo-dot"></div>
-        <strong>Warrior Brush Trucks</strong> — Skid Unit Configurator (Demo)
+        <strong>Warrior Brush Trucks</strong> — Skid Unit Configurator (Demo)</strong>
       </div>
       <nav class="top-actions">
         <button id="btn-share" class="btn ghost">Share build</button>
@@ -26,6 +26,9 @@
   <main class="container layout">
     <aside class="panel">
       <h2>Build Your Unit</h2>
+
+      <div id="error-banner"></div>
+
       <label class="lbl">Family</label>
       <select id="family"></select>
 
@@ -49,6 +52,7 @@
 
       <div class="cta">
         <button id="btn-request-quote" class="btn wide">Email Me A Quote</button>
+        <button id="btn-load-demo" class="btn wide">Load Test Build</button>
       </div>
     </aside>
 
@@ -71,6 +75,6 @@
     </div>
   </footer>
 
-  <script type="module" src="./app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
