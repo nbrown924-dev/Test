@@ -1,77 +1,142 @@
 {
   "families": [
-    "UTV",
-    "Pickup"
+    "UTV Skid",
+    "Truck Skid"
   ],
   "models": [
     {
-      "id": "utv-50-poly",
-      "family": "UTV",
-      "name": "UTV 50 gal Poly",
-      "basePrice": 3950,
-      "baseWeight": 160,
+      "id": "utv-50-pco",
+      "family": "UTV Skid",
+      "name": "50 Gallon UTV PCO Fire Skid Unit",
+      "imageUrl": "https://warriorbrushtrucks.com/wp-content/uploads/2023/03/CCI50G-PCO-FS-SKID_Page_1-e1677858203837.jpg",
+      "basePrice": 4000,
+      "baseWeight": 170,
       "leadWeeks": "2-4",
       "defaults": [
-        "tank-50",
         "reel-manual",
+        "hose-3-4x75",
         "pump-mini"
       ],
       "dims": {
         "L": 60,
         "W": 42
+      },
+      "specs": {
+        "Frame": "All-aluminum",
+        "Tank": "50 gal water tank (easy fill)",
+        "Hose Reel": "Manual Hannay (hand crank)",
+        "Hose": "75' of 3/4\" red rubber w/ fog nozzle",
+        "Pump": "CET Mini w/ 2.5 hp 4-stroke Honda",
+        "Tank Material": "Polyethylene, 5-year UV rating",
+        "Notes": "Factory tested; OEM parts registration"
       }
     },
     {
-      "id": "utv-100-poly",
-      "family": "UTV",
-      "name": "UTV 100 gal Poly",
-      "basePrice": 4550,
-      "baseWeight": 210,
+      "id": "utv-50-forestry",
+      "family": "UTV Skid",
+      "name": "50 Gallon Aluminum UTV Forestry Skid",
+      "imageUrl": "https://warriorbrushtrucks.com/wp-content/uploads/2023/03/CCI-50G-ATV_FF_SKID_Page_1.jpg",
+      "basePrice": 4800,
+      "baseWeight": 200,
       "leadWeeks": "3-5",
       "defaults": [
-        "tank-100",
         "reel-manual",
+        "hose-3-4x75",
+        "pump-mini"
+      ],
+      "dims": {
+        "L": 62,
+        "W": 44
+      },
+      "specs": {
+        "Frame": "All-aluminum",
+        "Tank": "50 gal aluminum tank (easy fill)",
+        "Hose Reel": "Manual Hannay (hand crank)",
+        "Hose": "75' of 3/4\" red rubber",
+        "Pump": "CET Mini w/ 2.5 hp 4-stroke Honda",
+        "Accessories": "(2) drip torch holders; 12-gal fuel tank w/ hose & nozzle; water cooler holder; lockbox & gear rack"
+      }
+    },
+    {
+      "id": "utv-50-100-poly",
+      "family": "UTV Skid",
+      "name": "50\u2013100 Gallon UTV Poly Wildland Rescue Skid",
+      "imageUrl": "https://warriorbrushtrucks.com/wp-content/uploads/2023/03/CCI70GF-R_SKID-POLY_Page_1.jpg",
+      "basePrice": 5200,
+      "baseWeight": 220,
+      "leadWeeks": "3-6",
+      "defaults": [
+        "tank-50",
+        "reel-manual",
+        "hose-1x50",
         "pump-dual"
       ],
       "dims": {
         "L": 68,
         "W": 48
+      },
+      "specs": {
+        "Tank": "50 gal (sight tube); poly welded construction",
+        "Reel": "Manual Hannay",
+        "Hose": "1\" \u00d7 50'",
+        "Pump": "CET Dual Stage; 5.5 hp Honda",
+        "Performance": "39\u201390 PSI, 20\u201395 GPM",
+        "Valves": "1\" & 1-1/2\" NHT discharges, recirculate, suction"
       }
     },
     {
-      "id": "pickup-300-poly",
-      "family": "Pickup",
-      "name": "Pickup 300 gal Poly",
-      "basePrice": 9750,
-      "baseWeight": 620,
+      "id": "utv-50-100-alum",
+      "family": "UTV Skid",
+      "name": "50\u2013100 Gallon UTV Aluminum Wildland Rescue Skid",
+      "imageUrl": "https://warriorbrushtrucks.com/wp-content/uploads/2023/03/CCI70GF-R_SKID_Page_1.jpg",
+      "basePrice": 5600,
+      "baseWeight": 230,
       "leadWeeks": "4-6",
       "defaults": [
-        "tank-300",
+        "tank-50",
+        "reel-manual",
+        "hose-1x50",
+        "pump-dual"
+      ],
+      "dims": {
+        "L": 68,
+        "W": 48
+      },
+      "specs": {
+        "Tank": "50 gal (sight tube); aluminum structure",
+        "Reel": "Manual Hannay",
+        "Hose": "1\" \u00d7 50'",
+        "Pump": "CET Dual Stage; 5.5 hp Honda",
+        "Performance": "39\u201390 PSI, 20\u201395 GPM",
+        "Valves": "1\" & 1-1/2\" NHT discharges, recirculate, suction"
+      }
+    },
+    {
+      "id": "truck-100-500-poly",
+      "family": "Truck Skid",
+      "name": "100\u2013500 Gallon Poly Wildland Pickup/Flatbed Skid",
+      "imageUrl": "https://warriorbrushtrucks.com/wp-content/uploads/2023/03/200GTRCKFDSKD_Page_1.jpg",
+      "basePrice": 9800,
+      "baseWeight": 600,
+      "leadWeeks": "4-8",
+      "defaults": [
+        "tank-100",
         "reel-electric",
+        "hose-1x100",
         "pump-dual-es",
         "foam-4171"
       ],
       "dims": {
         "L": 84,
         "W": 54
-      }
-    },
-    {
-      "id": "pickup-500-poly",
-      "family": "Pickup",
-      "name": "Pickup 500 gal Poly",
-      "basePrice": 13450,
-      "baseWeight": 920,
-      "leadWeeks": "6-8",
-      "defaults": [
-        "tank-500",
-        "reel-electric",
-        "pump-20hp",
-        "foam-4171"
-      ],
-      "dims": {
-        "L": 96,
-        "W": 60
+      },
+      "specs": {
+        "Tank": "100 gal (sight tube); poly-welded construction",
+        "Reel": "Electric Hannay; 1\" \u00d7 100'",
+        "Pump": "CET Dual Stage (electric start); 5.5 hp Honda",
+        "Performance": "48\u2013120 PSI, 20\u201365 GPM",
+        "Valves": "1\" & 1-1/2\" discharges; recirculate; suction",
+        "Options": "200/300/400/500-gal, built-in foam cell, CET PFP-20 (20 hp) w/ control panel & primer, Scotty 4171, SS manifold"
       }
     }
   ],
@@ -79,166 +144,160 @@
     {
       "id": "tank-50",
       "group": "Tank",
-      "label": "50 gal Poly",
-      "price": 0,
+      "label": "50 gal tank",
+      "price": 10,
       "weight": 0,
       "families": [
-        "UTV"
-      ],
-      "mesh": "tank50"
+        "UTV Skid"
+      ]
     },
     {
       "id": "tank-70",
       "group": "Tank",
-      "label": "70 gal Poly",
-      "price": 420,
+      "label": "70 gal tank",
+      "price": 10,
       "weight": 35,
       "families": [
-        "UTV"
-      ],
-      "mesh": "tank70"
+        "UTV Skid"
+      ]
     },
     {
       "id": "tank-100",
       "group": "Tank",
-      "label": "100 gal Poly",
-      "price": 780,
+      "label": "100 gal tank",
+      "price": 10,
       "weight": 60,
       "families": [
-        "UTV",
-        "Pickup"
-      ],
-      "mesh": "tank100"
+        "UTV Skid",
+        "Truck Skid"
+      ]
     },
     {
       "id": "tank-300",
       "group": "Tank",
-      "label": "300 gal Poly",
-      "price": 0,
+      "label": "300 gal tank",
+      "price": 10,
       "weight": 0,
       "families": [
-        "Pickup"
-      ],
-      "mesh": "tank300"
+        "Truck Skid"
+      ]
     },
     {
       "id": "tank-400",
       "group": "Tank",
-      "label": "400 gal Poly",
-      "price": 1100,
+      "label": "400 gal tank",
+      "price": 10,
       "weight": 140,
       "families": [
-        "Pickup"
-      ],
-      "mesh": "tank400"
+        "Truck Skid"
+      ]
     },
     {
       "id": "tank-500",
       "group": "Tank",
-      "label": "500 gal Poly",
-      "price": 1900,
+      "label": "500 gal tank",
+      "price": 10,
       "weight": 230,
       "families": [
-        "Pickup"
-      ],
-      "mesh": "tank500"
+        "Truck Skid"
+      ]
     },
     {
       "id": "reel-manual",
       "group": "Hose Reel",
-      "label": "Hannay Manual",
-      "price": 0,
-      "weight": 18,
-      "mesh": "reelManual"
+      "label": "Manual Hannay",
+      "price": 10,
+      "weight": 18
     },
     {
       "id": "reel-electric",
       "group": "Hose Reel",
-      "label": "Hannay Electric",
-      "price": 1250,
-      "weight": 32,
-      "mesh": "reelElectric"
+      "label": "Electric Hannay",
+      "price": 10,
+      "weight": 32
+    },
+    {
+      "id": "hose-3-4x75",
+      "group": "Hose",
+      "label": "3/4\" \u00d7 75' rubber",
+      "price": 10,
+      "weight": 9
     },
     {
       "id": "hose-1x50",
       "group": "Hose",
-      "label": "1\" x 50' NFPA",
-      "price": 210,
+      "label": "1\" \u00d7 50' booster",
+      "price": 10,
       "weight": 9
     },
     {
       "id": "hose-1x100",
       "group": "Hose",
-      "label": "1\" x 100' NFPA",
-      "price": 380,
+      "label": "1\" \u00d7 100' booster",
+      "price": 10,
       "weight": 16
     },
     {
       "id": "pump-mini",
       "group": "Pump",
-      "label": "CET Mini (2.5HP)",
-      "price": 680,
-      "weight": 28,
-      "mesh": "pumpMini"
+      "label": "CET Mini (2.5 hp)",
+      "price": 10,
+      "weight": 28
     },
     {
       "id": "pump-dual",
       "group": "Pump",
       "label": "CET Dual Stage",
-      "price": 2650,
-      "weight": 52,
-      "mesh": "pumpDual"
+      "price": 10,
+      "weight": 52
     },
     {
       "id": "pump-dual-es",
       "group": "Pump",
       "label": "CET Dual Stage (E-Start)",
-      "price": 3050,
-      "weight": 55,
-      "mesh": "pumpDualES"
+      "price": 10,
+      "weight": 55
     },
     {
       "id": "pump-20hp",
       "group": "Pump",
-      "label": "CET PFP-20 (20HP)",
-      "price": 4950,
-      "weight": 85,
-      "mesh": "pump20hp"
+      "label": "CET PFP-20 (20 hp)",
+      "price": 10,
+      "weight": 85
     },
     {
       "id": "foam-4171",
       "group": "Foam System",
       "label": "Scotty 4171",
-      "price": 790,
-      "weight": 10,
-      "mesh": "foam4171"
+      "price": 10,
+      "weight": 10
     },
     {
       "id": "manifold-ss",
       "group": "Manifold",
-      "label": "Stainless Discharge Manifold",
-      "price": 450,
+      "label": "Stainless discharge manifold",
+      "price": 10,
       "weight": 12
     },
     {
       "id": "fittings-brass",
       "group": "Fittings",
-      "label": "Brass Fittings/Valves",
-      "price": 0,
+      "label": "Brass fittings/valves",
+      "price": 10,
       "weight": 0
     },
     {
       "id": "fittings-ss",
       "group": "Fittings",
-      "label": "Stainless Fittings/Valves",
-      "price": 260,
+      "label": "Stainless fittings/valves",
+      "price": 10,
       "weight": 2
     }
   ],
   "rules": [
     {
       "if": {
-        "family": "UTV",
+        "family": "UTV Skid",
         "tankMin": 100
       },
       "then": {
@@ -259,7 +318,7 @@
     },
     {
       "if": {
-        "family": "Pickup",
+        "family": "Truck Skid",
         "tankMin": 400
       },
       "then": {
@@ -273,7 +332,7 @@
     {
       "id": "kit-12v",
       "label": "12V wiring kit",
-      "price": 140,
+      "price": 10,
       "weight": 4,
       "hidden": true
     }

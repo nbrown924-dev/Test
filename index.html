@@ -3,10 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Warrior Skid Configurator (Demo)</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <title>Warrior Skid Configurator (v2)</title>
   <link rel="stylesheet" href="./styles.css" />
-  <!-- Three.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
 </head>
@@ -44,6 +42,11 @@
         <div class="eta"><strong>Est. Lead Time:</strong> <span id="sum-lead">2–4 weeks</span></div>
       </div>
 
+      <div class="specs-card">
+        <h4>Standard Specs</h4>
+        <table class="spec-table" id="specs-table"></table>
+      </div>
+
       <div class="cta">
         <button id="btn-request-quote" class="btn wide">Email Me A Quote</button>
       </div>
@@ -51,6 +54,7 @@
 
     <section class="stage">
       <div id="stage-canvas"></div>
+      <img id="model-image" alt="Model preview"/>
       <div class="legend">
         <span class="key tank"></span> Tank
         <span class="key reel"></span> Reel

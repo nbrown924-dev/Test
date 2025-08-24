@@ -5,8 +5,7 @@
   --card:#161b22;
   --muted:#8892a6;
   --text:#e6edf3;
-  --accent:#d7263d; /* vivid red accent */
-  --accent-2:#2b6cb0; /* blue secondary */
+  --accent:#d7263d;
   --border:#202833;
 }
 *{box-sizing:border-box}
@@ -22,8 +21,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,Seg
 .btn:hover{filter:brightness(1.1)}
 .btn.primary{background:var(--accent);border-color:#a11627}
 .btn.ghost{background:transparent}
-
-.layout{display:grid;grid-template-columns:360px 1fr;gap:18px;margin:18px auto}
+.layout{display:grid;grid-template-columns:380px 1fr;gap:18px;margin:18px auto}
 .panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px;position:sticky;top:12px;height:fit-content}
 .lbl{display:block;margin-top:8px;margin-bottom:4px;color:var(--muted)}
 select,input[type=checkbox]{background:#0f1318;color:var(--text);border:1px solid var(--border);border-radius:8px;padding:8px;width:100%}
@@ -35,9 +33,9 @@ select,input[type=checkbox]{background:#0f1318;color:var(--text);border:1px soli
 .summary{margin-top:12px;padding:10px;border:1px solid var(--border);border-radius:10px;background:#0e1217}
 .summary .total{font-size:1.25rem;margin-top:6px}
 .cta{margin-top:10px}
-
-.stage{background:radial-gradient(1200px 600px at 50% 10%, #1a2330 0%, #0c0f12 60%);border:1px solid var(--border);border-radius:12px;position:relative;min-height:520px}
-#stage-canvas{height:520px}
+.stage{background:radial-gradient(1200px 600px at 50% 10%, #1a2330 0%, #0c0f12 60%);border:1px solid var(--border);border-radius:12px;position:relative;min-height:560px}
+#stage-canvas{height:560px}
+#model-image{position:absolute;top:12px;right:12px;max-width:48%;max-height:48%;border:1px solid var(--border);border-radius:8px;background:#000;object-fit:contain;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .legend{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,0.4);backdrop-filter:blur(4px);padding:6px 8px;border-radius:8px;border:1px solid var(--border);display:flex;gap:10px;align-items:center;font-size:12px}
 .key{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:4px;border:1px solid #0004}
 .key.tank{background:#2ecc71}
@@ -45,6 +43,10 @@ select,input[type=checkbox]{background:#0f1318;color:var(--text);border:1px soli
 .key.pump{background:#9b59b6}
 .key.frame{background:#95a5a6}
 .key.foam{background:#3498db}
-
+.specs-card{margin-top:12px;background:#0e1217;border:1px solid var(--border);border-radius:10px;padding:10px}
+.specs-card h4{margin:0 0 8px 0}
+.spec-table{width:100%;border-collapse:collapse}
+.spec-table td{padding:6px 8px;border-bottom:1px dotted #243041;vertical-align:top}
+.spec-table td:first-child{color:#9fb3c8;width:38%}
 .site-footer{border-top:1px solid var(--border);margin-top:12px;padding:12px 0;color:var(--muted)}
 .btn.wide{width:100%}
