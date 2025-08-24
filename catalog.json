@@ -1,0 +1,281 @@
+{
+  "families": [
+    "UTV",
+    "Pickup"
+  ],
+  "models": [
+    {
+      "id": "utv-50-poly",
+      "family": "UTV",
+      "name": "UTV 50 gal Poly",
+      "basePrice": 3950,
+      "baseWeight": 160,
+      "leadWeeks": "2-4",
+      "defaults": [
+        "tank-50",
+        "reel-manual",
+        "pump-mini"
+      ],
+      "dims": {
+        "L": 60,
+        "W": 42
+      }
+    },
+    {
+      "id": "utv-100-poly",
+      "family": "UTV",
+      "name": "UTV 100 gal Poly",
+      "basePrice": 4550,
+      "baseWeight": 210,
+      "leadWeeks": "3-5",
+      "defaults": [
+        "tank-100",
+        "reel-manual",
+        "pump-dual"
+      ],
+      "dims": {
+        "L": 68,
+        "W": 48
+      }
+    },
+    {
+      "id": "pickup-300-poly",
+      "family": "Pickup",
+      "name": "Pickup 300 gal Poly",
+      "basePrice": 9750,
+      "baseWeight": 620,
+      "leadWeeks": "4-6",
+      "defaults": [
+        "tank-300",
+        "reel-electric",
+        "pump-dual-es",
+        "foam-4171"
+      ],
+      "dims": {
+        "L": 84,
+        "W": 54
+      }
+    },
+    {
+      "id": "pickup-500-poly",
+      "family": "Pickup",
+      "name": "Pickup 500 gal Poly",
+      "basePrice": 13450,
+      "baseWeight": 920,
+      "leadWeeks": "6-8",
+      "defaults": [
+        "tank-500",
+        "reel-electric",
+        "pump-20hp",
+        "foam-4171"
+      ],
+      "dims": {
+        "L": 96,
+        "W": 60
+      }
+    }
+  ],
+  "options": [
+    {
+      "id": "tank-50",
+      "group": "Tank",
+      "label": "50 gal Poly",
+      "price": 0,
+      "weight": 0,
+      "families": [
+        "UTV"
+      ],
+      "mesh": "tank50"
+    },
+    {
+      "id": "tank-70",
+      "group": "Tank",
+      "label": "70 gal Poly",
+      "price": 420,
+      "weight": 35,
+      "families": [
+        "UTV"
+      ],
+      "mesh": "tank70"
+    },
+    {
+      "id": "tank-100",
+      "group": "Tank",
+      "label": "100 gal Poly",
+      "price": 780,
+      "weight": 60,
+      "families": [
+        "UTV",
+        "Pickup"
+      ],
+      "mesh": "tank100"
+    },
+    {
+      "id": "tank-300",
+      "group": "Tank",
+      "label": "300 gal Poly",
+      "price": 0,
+      "weight": 0,
+      "families": [
+        "Pickup"
+      ],
+      "mesh": "tank300"
+    },
+    {
+      "id": "tank-400",
+      "group": "Tank",
+      "label": "400 gal Poly",
+      "price": 1100,
+      "weight": 140,
+      "families": [
+        "Pickup"
+      ],
+      "mesh": "tank400"
+    },
+    {
+      "id": "tank-500",
+      "group": "Tank",
+      "label": "500 gal Poly",
+      "price": 1900,
+      "weight": 230,
+      "families": [
+        "Pickup"
+      ],
+      "mesh": "tank500"
+    },
+    {
+      "id": "reel-manual",
+      "group": "Hose Reel",
+      "label": "Hannay Manual",
+      "price": 0,
+      "weight": 18,
+      "mesh": "reelManual"
+    },
+    {
+      "id": "reel-electric",
+      "group": "Hose Reel",
+      "label": "Hannay Electric",
+      "price": 1250,
+      "weight": 32,
+      "mesh": "reelElectric"
+    },
+    {
+      "id": "hose-1x50",
+      "group": "Hose",
+      "label": "1\" x 50' NFPA",
+      "price": 210,
+      "weight": 9
+    },
+    {
+      "id": "hose-1x100",
+      "group": "Hose",
+      "label": "1\" x 100' NFPA",
+      "price": 380,
+      "weight": 16
+    },
+    {
+      "id": "pump-mini",
+      "group": "Pump",
+      "label": "CET Mini (2.5HP)",
+      "price": 680,
+      "weight": 28,
+      "mesh": "pumpMini"
+    },
+    {
+      "id": "pump-dual",
+      "group": "Pump",
+      "label": "CET Dual Stage",
+      "price": 2650,
+      "weight": 52,
+      "mesh": "pumpDual"
+    },
+    {
+      "id": "pump-dual-es",
+      "group": "Pump",
+      "label": "CET Dual Stage (E-Start)",
+      "price": 3050,
+      "weight": 55,
+      "mesh": "pumpDualES"
+    },
+    {
+      "id": "pump-20hp",
+      "group": "Pump",
+      "label": "CET PFP-20 (20HP)",
+      "price": 4950,
+      "weight": 85,
+      "mesh": "pump20hp"
+    },
+    {
+      "id": "foam-4171",
+      "group": "Foam System",
+      "label": "Scotty 4171",
+      "price": 790,
+      "weight": 10,
+      "mesh": "foam4171"
+    },
+    {
+      "id": "manifold-ss",
+      "group": "Manifold",
+      "label": "Stainless Discharge Manifold",
+      "price": 450,
+      "weight": 12
+    },
+    {
+      "id": "fittings-brass",
+      "group": "Fittings",
+      "label": "Brass Fittings/Valves",
+      "price": 0,
+      "weight": 0
+    },
+    {
+      "id": "fittings-ss",
+      "group": "Fittings",
+      "label": "Stainless Fittings/Valves",
+      "price": 260,
+      "weight": 2
+    }
+  ],
+  "rules": [
+    {
+      "if": {
+        "family": "UTV",
+        "tankMin": 100
+      },
+      "then": {
+        "require": [
+          "pump-dual"
+        ]
+      }
+    },
+    {
+      "if": {
+        "option": "reel-electric"
+      },
+      "then": {
+        "add": [
+          "kit-12v"
+        ]
+      }
+    },
+    {
+      "if": {
+        "family": "Pickup",
+        "tankMin": 400
+      },
+      "then": {
+        "require": [
+          "pump-dual-es"
+        ]
+      }
+    }
+  ],
+  "addons": [
+    {
+      "id": "kit-12v",
+      "label": "12V wiring kit",
+      "price": 140,
+      "weight": 4,
+      "hidden": true
+    }
+  ]
+}

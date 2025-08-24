@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Warrior Skid Configurator (Demo)</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        <strong>Warrior Brush Trucks</strong> — Skid Unit Configurator (Demo)
+      </div>
+      <nav class="top-actions">
+        <button id="btn-share" class="btn ghost">Share build</button>
+        <button id="btn-snapshot" class="btn ghost">Snapshot</button>
+        <a id="btn-download-quote" class="btn primary" href="#" download="skid-quote.json">Download Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <aside class="panel">
+      <h2>Build Your Unit</h2>
+      <label class="lbl">Family</label>
+      <select id="family"></select>
+
+      <label class="lbl">Model</label>
+      <select id="model"></select>
+
+      <div id="options"></div>
+
+      <div class="summary">
+        <div><strong>Model:</strong> <span id="sum-model">—</span></div>
+        <div><strong>Options:</strong> <span id="sum-options">—</span></div>
+        <div><strong>Est. Weight:</strong> <span id="sum-weight">0</span> lb</div>
+        <div class="total"><strong>Total:</strong> <span id="sum-total">$0</span></div>
+        <div class="eta"><strong>Est. Lead Time:</strong> <span id="sum-lead">2–4 weeks</span></div>
+      </div>
+
+      <div class="cta">
+        <button id="btn-request-quote" class="btn wide">Email Me A Quote</button>
+      </div>
+    </aside>
+
+    <section class="stage">
+      <div id="stage-canvas"></div>
+      <div class="legend">
+        <span class="key tank"></span> Tank
+        <span class="key reel"></span> Reel
+        <span class="key pump"></span> Pump
+        <span class="key frame"></span> Frame
+        <span class="key foam"></span> Foam
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Demo data. Not an official quote. © WarriorBrushTrucks.com</small>
+    </div>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
