@@ -3,78 +3,444 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Warrior Skid Configurator (v2.1)</title>
-  <link rel="stylesheet" href="./styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+  <title>Wildfire Works | Custom Brush Trucks & UTV Skid Units</title>
+  <meta name="description" content="Custom brush fire trucks and UTV skid units. Configure, quote, and deploy rugged wildfire solutions built for your terrain." />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23fff' d='M32 4c8 12-4 16-4 24s8 12 8 20-8 12-16 8C8 52 6 38 14 28c8-10 8-10 6-16 8 4 12-4 12-8z'/%3E%3C/svg%3E" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <div class="logo-dot"></div>
-        <strong>Warrior Brush Trucks</strong> — Skid Unit Configurator (Demo)</strong>
+        <!-- Swap this logo src with the company mark from the Brush Trucks page header -->
+        <img class="logo-img" src="images/logo.png" alt="Warrior Brush Trucks logo" />
+        <a href="#" class="brand-name" aria-label="Wildfire Works Home">Wildfire Works</a>
       </div>
-      <nav class="top-actions">
-        <button id="btn-share" class="btn ghost">Share build</button>
-        <button id="btn-snapshot" class="btn ghost">Snapshot</button>
-        <a id="btn-download-quote" class="btn primary" href="#" download="skid-quote.json">Download Quote</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link active" data-tab="home" href="#home">Home</a></li>
+          <li><a class="nav-link" data-tab="truck-skids" href="#truck-skids">Truck Skids</a></li>
+          <li><a class="nav-link" data-tab="utv-skids" href="#utv-skids">UTV Skids</a></li>
+          <li><a class="nav-link" data-tab="trucks" href="#trucks">Brush Trucks</a></li>
+          <li><a class="nav-link" data-tab="gallery" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link" data-tab="contact" href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container layout">
-    <aside class="panel">
-      <h2>Build Your Unit</h2>
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Built for the burn line.</h1>
+          <p class="lead">Custom brush trucks and UTV skid units engineered for speed, safety, and simplicity in the toughest conditions.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#truck-skids">Explore Truck Skids</a>
+            <a class="btn btn-ghost" href="#utv-skids">Explore UTV Skids</a>
+          </div>
+          <ul class="badges" aria-label="Highlights">
+            <li>NFPA-minded layouts</li>
+            <li>Lifetime frame warranty</li>
+            <li>Quick-quote in 24h*</li>
+          </ul>
+          <p class="disclaimer">*Typical for standard configurations.</p>
+        </div>
 
-      <div id="error-banner"></div>
-
-      <label class="lbl">Family</label>
-      <select id="family"></select>
-
-      <label class="lbl">Model</label>
-      <select id="model"></select>
-
-      <div id="options"></div>
-
-      <div class="summary">
-        <div><strong>Model:</strong> <span id="sum-model">—</span></div>
-        <div><strong>Options:</strong> <span id="sum-options">—</span></div>
-        <div><strong>Est. Weight:</strong> <span id="sum-weight">0</span> lb</div>
-        <div class="total"><strong>Total:</strong> <span id="sum-total">$0</span></div>
-        <div class="eta"><strong>Est. Lead Time:</strong> <span id="sum-lead">2–4 weeks</span></div>
+        <div class="hero-art" role="img" aria-label="Brush truck in wildland environment">
+          <picture>
+            <!-- Mobile hero -->
+            <source media="(max-width: 799px)" srcset="https://warriorbrushtrucks.com/wp-content/uploads/2023/10/20230925_082558-scaled.webp">
+            <!-- Desktop hero -->
+            <img src="https://warriorbrushtrucks.com/wp-content/uploads/2023/10/20230925_082558-scaled.webp" alt="Custom brush truck with skid unit on scene">
+          </picture>
+          <div class="hero-overlay" aria-hidden="true"></div>
+        </div>
       </div>
+    </section>
 
-      <div class="specs-card">
-        <h4>Standard Specs</h4>
-        <table class="spec-table" id="specs-table"></table>
+    <!-- Product Preview -->
+    <section id="truck-skids" class="section-pad section-alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Truck Skids</h2>
+          <p>Modular wildfire attack packages for 1/2-ton to 1-ton platforms.</p>
+        </header>
+        <div class="cards">
+          <article class="card">
+            <img class="card-media" src="https://warriorbrushtrucks.com/wp-content/uploads/2023/03/200GTRCKFDSKD_Page_1.jpg" alt="TS-200 Compact skid unit mounted on a pickup truck" />
+            <div class="card-body">
+              <h3>TS-200 Compact</h3>
+              <p>200 gal poly tank · 18 HP pump · Reel 150'</p>
+              <div class="chip-row">
+                <span class="chip">Quick Attack</span>
+                <span class="chip">Light Duty</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-sm" data-action="details">Details</button>
+                <button class="btn btn-sm btn-primary" data-action="configure">Configure</button>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-media" src="https://warriorbrushtrucks.com/wp-content/uploads/2023/03/200GTRCKFDSKD_Page_1.jpg" alt="TS-300 Utility skid unit with hose reel and poly tank" />
+            <div class="card-body">
+              <h3>TS-300 Utility</h3>
+              <p>300 gal poly tank · 23 HP pump · Reel 200'</p>
+              <div class="chip-row">
+                <span class="chip">All-Rounder</span>
+                <span class="chip">Mid Duty</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-sm" data-action="details">Details</button>
+                <button class="btn btn-sm btn-primary" data-action="configure">Configure</button>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-media" src="https://warriorbrushtrucks.com/wp-content/uploads/2023/03/200GTRCKFDSKD_Page_1.jpg" alt="TS-400 Pro twin-line heavy duty skid unit" />
+            <div class="card-body">
+              <h3>TS-400 Pro</h3>
+              <p>400 gal poly tank · 35 HP pump · Dual Reels</p>
+              <div class="chip-row">
+                <span class="chip">Heavy Duty</span>
+                <span class="chip">Twin Line</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-sm" data-action="details">Details</button>
+                <button class="btn btn-sm btn-primary" data-action="configure">Configure</button>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="cta">
-        <button id="btn-request-quote" class="btn wide">Email Me A Quote</button>
-        <button id="btn-load-demo" class="btn wide">Load Test Build</button>
+    <section id="utv-skids" class="section-pad">
+      <div class="container">
+        <header class="section-head">
+          <h2>UTV Skids</h2>
+          <p>Low-profile wildland modules that drop into your UTV bed.</p>
+        </header>
+        <div class="cards">
+          <article class="card">
+            <img class="card-media" src="https://warriorbrushtrucks.com/wp-content/uploads/2023/03/ATV-UTV-SKID-1.png" alt="US-50 Scout compact skid unit inside a UTV bed" />
+            <div class="card-body">
+              <h3>US-50 Scout</h3>
+              <p>50 gal · Compact pump · Reel 100'</p>
+              <div class="chip-row">
+                <span class="chip">Ultra-Light</span>
+                <span class="chip">Single Operator</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-sm" data-action="details">Details</button>
+                <button class="btn btn-sm btn-primary" data-action="configure">Configure</button>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-media" src="https://warriorbrushtrucks.com/wp-content/uploads/2023/03/ATV-UTV-SKID-1.png" alt="US-85 Trail skid unit with high-flow pump mounted in UTV" />
+            <div class="card-body">
+              <h3>US-85 Trail</h3>
+              <p>85 gal · High-flow pump · Reel 150'</p>
+              <div class="chip-row">
+                <span class="chip">Balanced</span>
+                <span class="chip">Responder</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-sm" data-action="details">Details</button>
+                <button class="btn btn-sm btn-primary" data-action="configure">Configure</button>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card-media" src="https://warriorbrushtrucks.com/wp-content/uploads/2023/03/ATV-UTV-SKID-1.png" alt="US-110 Ranger max-capacity UTV skid unit with hose reel" />
+            <div class="card-body">
+              <h3>US-110 Ranger</h3>
+              <p>110 gal · Electric start · Reel 200'</p>
+              <div class="chip-row">
+                <span class="chip">Max Capacity</span>
+                <span class="chip">Pro Line</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-sm" data-action="details">Details</button>
+                <button class="btn btn-sm btn-primary" data-action="configure">Configure</button>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </aside>
+    </section>
 
-    <section class="stage">
-      <div id="stage-canvas"></div>
-      <img id="model-image" alt="Model preview"/>
-      <div class="legend">
-        <span class="key tank"></span> Tank
-        <span class="key reel"></span> Reel
-        <span class="key pump"></span> Pump
-        <span class="key frame"></span> Frame
-        <span class="key foam"></span> Foam
+    <!-- Brush Trucks Grid -->
+    <section id="trucks" class="section-pad section-alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Brush Trucks</h2>
+          <p>Full-vehicle images for finished builds, side/rear angles, and on-scene shots.</p>
+        </header>
+
+        <div class="gallery" data-gallery="trucks">
+          <figure class="thumb">
+            <img src="images/truck-01.jpg" data-full="https://warriorbrushtrucks.com/wp-content/uploads/2023/10/20230925_082558-scaled.webp" alt="Brush truck build—front three-quarter view" />
+            <figcaption>Build 01</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="images/truck-02.jpg" alt="Brush truck build—rear deck and hose reel" />
+            <figcaption>Build 02</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="images/truck-03.jpg" alt="Brush truck—side profile in field" />
+            <figcaption>Build 03</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="images/truck-04.jpg" alt="Brush truck—detail of pump and manifold" />
+            <figcaption>Build 04</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unified Gallery -->
+    <section id="gallery" class="section-pad">
+      <div class="container">
+        <header class="section-head">
+          <h2>Gallery</h2>
+          <p>Close-ups of reels, tanks, compartments, lighting, and on-scene action.</p>
+        </header>
+
+        <div class="gallery" data-gallery="misc">
+          <figure class="thumb">
+            <img src="images/misc-01.jpg" alt="Hose reel close-up" />
+            <figcaption>Hose Reel</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="images/misc-02.jpg" alt="Poly tank and plumbing detail" />
+            <figcaption>Tank & Plumbing</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="images/misc-03.jpg" alt="Skid frame and mounting points" />
+            <figcaption>Frame</figcaption>
+          </figure>
+          <figure class="thumb">
+            <img src="images/misc-04.jpg" alt="Lighting and scene illumination" />
+            <figcaption>Lighting</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skid Galleries -->
+    <section class="section-pad section-alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Skid Galleries</h2>
+          <p>Multiple angles for each skid series.</p>
+        </header>
+
+        <div class="skid-groups">
+          <div class="skid-group">
+            <h3 class="skid-title">TS-200</h3>
+            <div class="gallery" data-gallery="ts200">
+              <figure class="thumb">
+                <img src="images/ts200-01.jpg" alt="TS-200—angle 1" />
+                <figcaption>TS-200 #1</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/ts200-02.jpg" alt="TS-200—angle 2" />
+                <figcaption>TS-200 #2</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/ts200-03.jpg" alt="TS-200—angle 3" />
+                <figcaption>TS-200 #3</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="skid-group">
+            <h3 class="skid-title">TS-300</h3>
+            <div class="gallery" data-gallery="ts300">
+              <figure class="thumb">
+                <img src="images/ts300-01.jpg" alt="TS-300—angle 1" />
+                <figcaption>TS-300 #1</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/ts300-02.jpg" alt="TS-300—angle 2" />
+                <figcaption>TS-300 #2</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/ts300-03.jpg" alt="TS-300—angle 3" />
+                <figcaption>TS-300 #3</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="skid-group">
+            <h3 class="skid-title">TS-400</h3>
+            <div class="gallery" data-gallery="ts400">
+              <figure class="thumb">
+                <img src="images/ts400-01.jpg" alt="TS-400—angle 1" />
+                <figcaption>TS-400 #1</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/ts400-02.jpg" alt="TS-400—angle 2" />
+                <figcaption>TS-400 #2</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/ts400-03.jpg" alt="TS-400—angle 3" />
+                <figcaption>TS-400 #3</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="skid-group">
+            <h3 class="skid-title">US-50</h3>
+            <div class="gallery" data-gallery="us50">
+              <figure class="thumb">
+                <img src="images/us50-01.jpg" alt="US-50—angle 1" />
+                <figcaption>US-50 #1</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/us50-02.jpg" alt="US-50—angle 2" />
+                <figcaption>US-50 #2</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/us50-03.jpg" alt="US-50—angle 3" />
+                <figcaption>US-50 #3</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="skid-group">
+            <h3 class="skid-title">US-85</h3>
+            <div class="gallery" data-gallery="us85">
+              <figure class="thumb">
+                <img src="images/us85-01.jpg" alt="US-85—angle 1" />
+                <figcaption>US-85 #1</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/us85-02.jpg" alt="US-85—angle 2" />
+                <figcaption>US-85 #2</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/us85-03.jpg" alt="US-85—angle 3" />
+                <figcaption>US-85 #3</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="skid-group">
+            <h3 class="skid-title">US-110</h3>
+            <div class="gallery" data-gallery="us110">
+              <figure class="thumb">
+                <img src="images/us110-01.jpg" alt="US-110—angle 1" />
+                <figcaption>US-110 #1</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/us110-02.jpg" alt="US-110—angle 2" />
+                <figcaption>US-110 #2</figcaption>
+              </figure>
+              <figure class="thumb">
+                <img src="images/us110-03.jpg" alt="US-110—angle 3" />
+                <figcaption>US-110 #3</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Ready to spec your unit?</h2>
+        <p>Start with a proven package and tailor tanks, pumps, reels, and storage to your mission.</p>
+        <a class="btn btn-primary btn-lg" href="#contact">Get a Quick Quote</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-pad section-alt">
+      <div class="container contact-grid">
+        <header class="section-head">
+          <h2>Contact</h2>
+          <p>Tell us your platform, typical terrain, and timeline. We’ll get you options fast.</p>
+        </header>
+        <form class="contact-form" aria-label="Quick quote form">
+          <label>
+            <span class="label">Name</span>
+            <input type="text" name="name" placeholder="First & Last" required />
+          </label>
+          <label>
+            <span class="label">Email</span>
+            <input type="email" name="email" placeholder="you@department.gov" required />
+          </label>
+          <label>
+            <span class="label">Platform</span>
+            <select name="platform" required>
+              <option value="">Select one…</option>
+              <option>1/2-ton Truck</option>
+              <option>3/4-ton Truck</option>
+              <option>1-ton Truck</option>
+              <option>UTV — Short Bed</option>
+              <option>UTV — Long Bed</option>
+            </select>
+          </label>
+          <label class="span-2">
+            <span class="label">Notes</span>
+            <textarea name="notes" rows="4" placeholder="Tank size, pump preference, reel length, storage, lighting…"></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Send</button>
+            <button class="btn btn-ghost" type="reset">Reset</button>
+          </div>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <small>Demo data. Not an official quote. © WarriorBrushTrucks.com</small>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand mini">
+          <img class="logo-img" src="images/logo.png" alt="Warrior Brush Trucks logo" />
+          <span class="brand-name">Wildfire Works</span>
+        </div>
+        <p class="muted">Custom brush trucks & UTV skids. Built in the USA.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#truck-skids">Truck Skids</a></li>
+          <li><a href="#utv-skids">UTV Skids</a></li>
+          <li><a href="#trucks">Brush Trucks</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </nav>
+      <div class="footer-meta">
+        <p class="muted">© <span id="year"></span> Wildfire Works. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="./app.js"></script>
+  <!-- Lightbox -->
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" aria-label="Close preview">×</button>
+    <img class="lightbox-img" alt="" />
+    <div class="lightbox-caption" aria-live="polite"></div>
+  </div>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
